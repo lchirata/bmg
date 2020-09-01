@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 export const Contaneir = styled.div`
-    height: 60px;
+    height: 70px;
     padding: 0 30px;
-    background: #ff7979;
+    background: #706fd3;
     color: #FFF;
     text-align: left;
     /* justify-content: center; */
@@ -13,4 +13,8 @@ export const Contaneir = styled.div`
     font-size:20px;
     display: flex;
     justify-content: space-between;
+
+    a {
+        margin:5px;
+    }
 `;
