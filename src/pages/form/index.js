@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../../components/Header/index';
-import { Container, Teste } from './styles';
+import { Container, Form } from './styles';
 
 import TextField from '@material-ui/core/TextField';
 
@@ -29,9 +29,11 @@ export default class Main extends Component {
                               <span ><img src={threeIcon} alt="" /> Sua Simulação</span>
                          </div>
                     </Container>
-                    <Teste>
+                    <Form>
                          <h3>Olá! Quero muito te ajudar a construir seu sonho.</h3>
-                         <p>Vamos começar com algumas perguntas. Preciso que você pense no seu negócio e detalhe o máximo as respostas. Lembra-se que estamos construindo o projeto dos seus sonhos! </p>
+                         <p>Vamos começar com algumas perguntas. <br/> Preciso que você pense no seu negócio e detalhe o máximo as respostas. 
+                              <br/>Lembra-se que estamos construindo o projeto dos seus sonhos! 
+                         </p>
 
 
                          <form>
@@ -43,6 +45,7 @@ export default class Main extends Component {
                                    variant="filled"
                                    size="small"
                                    margin="10px"
+                                   position="absolut"
 
                               />
                               <TextField
@@ -52,6 +55,7 @@ export default class Main extends Component {
                                    defaultValue=""
                                    variant="filled"
                                    size="small"
+                                   position="absolut"
 
                               />
                              
@@ -62,6 +66,7 @@ export default class Main extends Component {
                                    defaultValue=""
                                    variant="filled"
                                    size="small"
+                                   position="absolut"
                               />
                               <TextField
                                    className="name"
@@ -70,12 +75,15 @@ export default class Main extends Component {
                                    defaultValue=""
                                    variant="filled"
                                    size="small"
+                                   
                               />
 
-
+                              
                          </form>
-                         <input type="submit" value="Confirmar" />
-                         </Teste>
+                        <p></p>
+                         <input className="confirm" type="submit" value="Confirmar" />
+                         
+                         </Form>
                          
 
                </>

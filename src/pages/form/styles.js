@@ -64,11 +64,24 @@ export const Container = styled.div`
     `;
 
 
-export const Teste = styled.div`
+export const Form = styled.div`
+        text-align:center;
+        margin:20px;
 
     h3 {
+        
 
-    background: black;
+        font-size:26px;
+        padding: 20px 10px;
+        text-align:center;
+
+
+        
+    }
+
+    p {
+        margin:50px;
+        font-size:26px;
 
     }
 
@@ -79,5 +92,16 @@ export const Teste = styled.div`
 
     .name {
         margin:10px;
+    }
+
+    .confirm {
+        size:10px;
+        padding:15px;
+        background:#ffda79;
+        border-width:1.5px;
+        border-style:none;
+        border-radius:3px;
+
+
     }
     `;
