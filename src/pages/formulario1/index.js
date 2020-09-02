@@ -41,6 +41,8 @@ export default class Main extends Component {
           this.onSubmit = (event) => {
                event.preventDefault();
                alert(this.state.email);
+               window.location.href = "/formulario2";
+               
 
           }
      };

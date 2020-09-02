@@ -31,7 +31,7 @@ export default class Main extends Component {
 
                     <Link  
                     style={{ textDecoration: 'none' }} 
-                    to="/form" 
+                    to="/formulario1" 
                     className="btn">Simule Agora
                     </Link>
 
