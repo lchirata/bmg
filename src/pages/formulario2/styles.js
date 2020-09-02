@@ -24,8 +24,12 @@ export const Container = styled.div`
         font-weight:60;
         font-size:35px;
         text-align:center;
-        background: #ffda79;
+
+
+        opacity:0.4;
+        background:#aaa69d;
         box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 1);
+
     }
     .titulo2{
         width:290px;
@@ -37,8 +41,8 @@ export const Container = styled.div`
         font-size:35px;
         font-weight:60;
         align-items:center;
-        opacity:0.4;
-        background:#aaa69d;
+
+        background: #ffda79;
         box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 1);
     }
     .titulo3{
@@ -61,10 +65,12 @@ export const Container = styled.div`
         height:35px;
         /* margin:5px */
     }
+
+
     `;
 
 
-export const Form = styled.div`
+export const Formulario = styled.div`
         text-align:center;
         margin:20px;
 
@@ -80,8 +86,10 @@ export const Form = styled.div`
     }
 
     p {
-        margin:50px;
-        font-size:26px;
+        margin-top:0px;
+        margin-left:320px;
+        font-size:12px;
+        color: red;
 
     }
 
@@ -101,7 +109,10 @@ export const Form = styled.div`
         border-width:1.5px;
         border-style:none;
         border-radius:3px;
+        text-decoration:none;
 
 
     }
+
+
     `;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../../components/Header/index';
-import { Container, Form } from './styles';
+import { Container, Formulario } from './styles';
 
 import TextField from '@material-ui/core/TextField';
 
@@ -11,6 +11,42 @@ import threeIcon from '../../images/threeIcon.png'
 
 
 export default class Main extends Component {
+
+     constructor(props) {
+          super(props);
+          this.state = {
+               isGoing: true,
+               numberOfGuests: 2
+          };
+
+          this.handleInputChange = this.handleInputChange.bind(this);
+     }
+
+     handleInputChange(event) {
+          const target = event.target;
+          const value = target.type === 'checkbox' ? target.checked : target.value;
+          const name = target.name;
+          const cpf = target.name;
+          const email = target.name;
+          const telefone = target.name;
+
+          this.setState({
+               [name]: value,
+               [cpf]: value,
+               [email]: value,
+               [telefone]: value,
+          });
+
+
+          this.onSubmit = (event) => {
+               event.preventDefault();
+               alert(this.state.email);
+
+          }
+     };
+
+
+
 
      render() {
 
@@ -29,14 +65,14 @@ export default class Main extends Component {
                               <span ><img src={threeIcon} alt="" /> Sua Simulação</span>
                          </div>
                     </Container>
-                    <Form>
+                    <Formulario>
                          <h3>Olá! Quero muito te ajudar a construir seu sonho.</h3>
-                         <p>Vamos começar com algumas perguntas. <br/> Preciso que você pense no seu negócio e detalhe o máximo as respostas. 
-                              <br/>Lembra-se que estamos construindo o projeto dos seus sonhos! 
+                         <p>Vamos começar com algumas perguntas. <br /> Preciso que você pense no seu negócio e detalhe o máximo as respostas.
+                              <br />Lembra-se que estamos construindo o projeto dos seus sonhos!
                          </p>
 
 
-                         <form>
+                         <form method="post" action="" id="primeiro_form" >
                               <TextField
                                    className="name"
                                    id="standard-size-small"
@@ -47,6 +83,11 @@ export default class Main extends Component {
                                    margin="10px"
                                    position="absolut"
 
+                                   name="name"
+                                   type="text"
+                                   value={this.state.nome}
+                                   onChange={this.handleInputChange}
+
                               />
                               <TextField
                                    className="name"
@@ -55,18 +96,30 @@ export default class Main extends Component {
                                    defaultValue=""
                                    variant="filled"
                                    size="small"
+                                   margin="10px"
                                    position="absolut"
 
+                                   name="cpf"
+                                   type="text"
+                                   value={this.state.cpf}
+                                   onChange={this.handleInputChange}
+
                               />
-                             
                               <TextField
                                    className="name"
                                    id="standard-size-small"
-                                   label="E-mail"
+                                   label="Email"
                                    defaultValue=""
                                    variant="filled"
                                    size="small"
+                                   margin="10px"
                                    position="absolut"
+
+                                   name="email"
+                                   type="text"
+                                   value={this.state.email}
+                                   onChange={this.handleInputChange}
+
                               />
                               <TextField
                                    className="name"
@@ -75,16 +128,29 @@ export default class Main extends Component {
                                    defaultValue=""
                                    variant="filled"
                                    size="small"
-                                   
+                                   margin="10px"
+                                   position="absolut"
+
+                                   name="telefone"
+                                   type="text"
+                                   value={this.state.telefone}
+                                   onChange={this.handleInputChange}
+
                               />
 
-                              
+                              <p></p>
+
+                              <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar"  > 
+                              Confirmar 
+                              </button>
                          </form>
-                        <p></p>
-                         <input className="confirm" type="submit" value="Confirmar" />
-                         
-                         </Form>
-                         
+                         <p></p>
+
+                         <a href="/formulario2">Continuar </a>
+
+
+                    </Formulario>
+
 
                </>
 
