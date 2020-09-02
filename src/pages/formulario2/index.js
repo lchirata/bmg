@@ -28,29 +28,48 @@ export default class Main extends Component {
           const target = event.target;
           const value = target.type === 'checkbox' ? target.checked : target.value;
           const item = target.name;
-          const valor = target.name;
+          const valor1 = target.name;
+          const valor2 = target.name;
+          const valor3 = target.name;
+          const valor4 = target.name;
+          const valor5 = target.name;
+
+
+
+
 
           this.setState({
 
-               [item]:value,
-               [valor]:value
+               [item]: value,
+               [valor1]: value,
+               [valor2]: value,
+               [valor3]: value,
+               [valor4]: value,
+               [valor5]: value
           });
 
 
+
           this.onSubmit = (event) => {
+
+               let a = this.state.valor1;
+               let b = this.state.valor2;
+               let c = this.state.valor3;
+               let d = this.state.valor4;
+               let e = this.state.valor5;
+               let n = Number(a);
+               let m = Number(b);
+               let o = Number(c);
+               let p = Number(d);
+               let q = Number(e);
+
+               alert(n+m+o+p+q);
                event.preventDefault();
-               alert(this.state.valor);   
+
+
           }
 
      };
-     
-     addItems() {
-
-     }
-
-     handleChange(e, index){
-     }
-
 
 
 
@@ -92,7 +111,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="item"
+                                        name="name"
                                         type="text"
                                         value={this.state.cnjp}
                                         onChange={this.handleInputChange}
@@ -100,7 +119,7 @@ export default class Main extends Component {
 
                                    <TextField
                                         className="name"
-                                        id="standard-size-small"
+                                        id="1"
                                         label="Valor"
                                         defaultValue=""
                                         variant="filled"
@@ -108,9 +127,9 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="valor"
+                                        name="valor1"
                                         type="text"
-                                        value={this.state.cnjp}
+                                        value={this.state.valor1}
                                         onChange={this.handleInputChange}
                                    />
                               </div>
@@ -126,7 +145,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="item"
+                                        name="name"
                                         type="text"
                                         value={this.state.cnjp}
                                         onChange={this.handleInputChange}
@@ -134,7 +153,7 @@ export default class Main extends Component {
 
                                    <TextField
                                         className="name"
-                                        id="standard-size-small"
+                                        id="2"
                                         label="Valor"
                                         defaultValue=""
                                         variant="filled"
@@ -142,9 +161,9 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="valor"
+                                        name="valor2"
                                         type="text"
-                                        value={this.state.cnjp}
+                                        value={this.state.valor2}
                                         onChange={this.handleInputChange}
                                    />
                               </div>
@@ -160,7 +179,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="item"
+                                        name="name"
                                         type="text"
                                         value={this.state.cnjp}
                                         onChange={this.handleInputChange}
@@ -168,7 +187,7 @@ export default class Main extends Component {
 
                                    <TextField
                                         className="name"
-                                        id="standard-size-small"
+                                        id="3"
                                         label="Valor"
                                         defaultValue=""
                                         variant="filled"
@@ -176,9 +195,9 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="valor"
+                                        name="valor3"
                                         type="text"
-                                        value={this.state.cnjp}
+                                        value={this.state.valor3}
                                         onChange={this.handleInputChange}
                                    />
                               </div>
@@ -194,7 +213,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="item"
+                                        name="name"
                                         type="text"
                                         value={this.state.cnjp}
                                         onChange={this.handleInputChange}
@@ -202,7 +221,7 @@ export default class Main extends Component {
 
                                    <TextField
                                         className="name"
-                                        id="standard-size-small"
+                                        id="4"
                                         label="Valor"
                                         defaultValue=""
                                         variant="filled"
@@ -210,9 +229,9 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="valor"
+                                        name="valor4"
                                         type="text"
-                                        value={this.state.cnjp}
+                                        value={this.state.valor4}
                                         onChange={this.handleInputChange}
                                    />
                               </div>
@@ -228,7 +247,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="item"
+                                        name="name"
                                         type="text"
                                         value={this.state.cnjp}
                                         onChange={this.handleInputChange}
@@ -236,7 +255,7 @@ export default class Main extends Component {
 
                                    <TextField
                                         className="name"
-                                        id="standard-size-small"
+                                        id="5"
                                         label="Valor"
                                         defaultValue=""
                                         variant="filled"
@@ -244,9 +263,9 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="valor"
+                                        name="valor5"
                                         type="text"
-                                        value={this.state.cnjp}
+                                        value={this.state.valor5}
                                         onChange={this.handleInputChange}
                                    />
                               </div>
