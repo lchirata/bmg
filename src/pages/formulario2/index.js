@@ -12,11 +12,13 @@ import threeIcon from '../../images/threeIcon.png'
 
 export default class Main extends Component {
 
+
      constructor(props) {
           super(props);
           this.state = {
                isGoing: true,
-               numberOfGuests: 2
+               numberOfGuests: 2,
+
           };
 
           this.handleInputChange = this.handleInputChange.bind(this);
@@ -25,21 +27,29 @@ export default class Main extends Component {
      handleInputChange(event) {
           const target = event.target;
           const value = target.type === 'checkbox' ? target.checked : target.value;
-          const negocio = target.name;
-          const cnpj = target.name;
+          const item = target.name;
+          const valor = target.name;
 
           this.setState({
-               [negocio]: value,
-               [cnpj]: value,
+
+               [item]:value,
+               [valor]:value
           });
 
 
           this.onSubmit = (event) => {
                event.preventDefault();
-               alert(this.state.cnpj);
-
+               alert(this.state.valor);   
           }
+
      };
+     
+     addItems() {
+
+     }
+
+     handleChange(e, index){
+     }
 
 
 
@@ -63,48 +73,189 @@ export default class Main extends Component {
                     </Container>
                     <Formulario>
                          <h3>Ultimo passo para simular o seu crédito!</h3>
+                         <h4>O que você precisa para começar seu projeto?</h4>
+                         <h4>Para uma melhor simulação pesquise os valores de cada item na internet!</h4>
                          <br>
                          </br>
 
 
                          <form>
-                              <TextField
-                                   className="name"
-                                   id="standard-size-small"
-                                   label="Nome do seu Negócio"
-                                   defaultValue=""
-                                   variant="filled"
-                                   size="small"
-                                   margin="10px"
-                                   position="absolut"
 
-                                   name="negocio"
-                                   type="text"
-                                   value={this.state.negocio}
-                                   onChange={this.handleInputChange}
+                              <div>
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="item 1 "
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
 
-                              />
-                              <TextField
-                                   className="name"
-                                   id="standard-size-small"
-                                   label="CNPJ"
-                                   defaultValue=""
-                                   variant="filled"
-                                   size="small"
-                                   margin="10px"
-                                   position="absolut"
+                                        name="item"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
 
-                                   name="cnpj"
-                                   type="text"
-                                   value={this.state.cnjp}
-                                   onChange={this.handleInputChange}
-                              />
-                              <p>* O CNPJ Não é obrigatóio</p>
-                              <p></p>
-                              <button className="confirm" type="submit" onClick={this.onSubmit}value="Confirmar" > Confirmar </button>
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="Valor"
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
+
+                                        name="valor"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
+                              </div>
+
+                              <div>
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="item 2"
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
+
+                                        name="item"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
+
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="Valor"
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
+
+                                        name="valor"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
+                              </div>
+
+                              <div>
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="item 3"
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
+
+                                        name="item"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
+
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="Valor"
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
+
+                                        name="valor"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
+                              </div>
+
+                              <div>
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="item 4"
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
+
+                                        name="item"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
+
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="Valor"
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
+
+                                        name="valor"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
+                              </div>
+
+                              <div>
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="item 5"
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
+
+                                        name="item"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
+
+                                   <TextField
+                                        className="name"
+                                        id="standard-size-small"
+                                        label="Valor"
+                                        defaultValue=""
+                                        variant="filled"
+                                        size="small"
+                                        margin="10px"
+                                        position="absolut"
+
+                                        name="valor"
+                                        type="text"
+                                        value={this.state.cnjp}
+                                        onChange={this.handleInputChange}
+                                   />
+                              </div>
+
+                              <br />
+                              <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar" > Confirmar </button>
 
                          </form>
-                         <p></p>
+                         <br />
 
                          <a href="/formulario1">Voltar </a>
                          <br />

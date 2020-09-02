@@ -106,5 +106,15 @@ export const Formulario = styled.div`
 
     }
 
+    .cnpj {
+        
+        margin-top:0px;
+        margin-left:320px;
+        font-size:12px;
+        color: red;
+
+    }
+    }
+
 
     `;

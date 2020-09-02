@@ -29,21 +29,23 @@ export default class Main extends Component {
           const cpf = target.name;
           const email = target.name;
           const telefone = target.name;
+          const negocio = target.name;
+          const cnpj = target.name;
 
           this.setState({
                [name]: value,
                [cpf]: value,
                [email]: value,
                [telefone]: value,
+               [negocio]: value,
+               [cnpj]: value,
           });
 
 
           this.onSubmit = (event) => {
                event.preventDefault();
-               alert(this.state.email);
+               alert(this.state.cnpj);
                window.location.href = "/formulario2";
-               
-
           }
      };
 
@@ -58,10 +60,10 @@ export default class Main extends Component {
                     <Container>
 
                          <div className="titulo1">
-                              <span ><img src={oneIcon} alt="" /> Dados pessoais</span>
+                              <span ><img src={oneIcon} alt="" /> Seus Dados</span>
                          </div>
                          <div className="titulo2">
-                              <span ><img src={twoIcon} alt="" /> Seu Negócio</span>
+                              <span ><img src={twoIcon} alt="" /> Seus Gastos</span>
                          </div>
                          <div className="titulo3">
                               <span ><img src={threeIcon} alt="" /> Sua Simulação</span>
@@ -139,6 +141,40 @@ export default class Main extends Component {
                                    onChange={this.handleInputChange}
 
                               />
+
+                              <br></br>
+                              <TextField
+                                   className="name"
+                                   id="standard-size-small"
+                                   label="Nome do seu Negócio"
+                                   defaultValue=""
+                                   variant="filled"
+                                   size="small"
+                                   margin="10px"
+                                   position="absolut"
+
+                                   name="negocio"
+                                   type="text"
+                                   value={this.state.negocio}
+                                   onChange={this.handleInputChange}
+
+                              />
+                              <TextField
+                                   className="name"
+                                   id="standard-size-small"
+                                   label="CNPJ"
+                                   defaultValue=""
+                                   variant="filled"
+                                   size="small"
+                                   margin="10px"
+                                   position="absolut"
+
+                                   name="cnpj"
+                                   type="text"
+                                   value={this.state.cnjp}
+                                   onChange={this.handleInputChange}
+                              />
+                              <p className="cnpj">* O CNPJ Não é obrigatóio</p>
 
                               <p></p>
 
