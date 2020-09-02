@@ -6,7 +6,6 @@ export const Contaneir = styled.div`
     background: #706fd3;
     color: #FFF;
     text-align: left;
-    /* justify-content: center; */
     padding-left:80px;
     display: flex;
     align-items: center;
