@@ -18,6 +18,7 @@ export default class Main extends Component {
           this.state = {
                isGoing: true,
                numberOfGuests: 2,
+               soma:''
 
           };
 
@@ -34,10 +35,6 @@ export default class Main extends Component {
           const valor4 = target.name;
           const valor5 = target.name;
 
-
-
-
-
           this.setState({
 
                [item]: value,
@@ -49,25 +46,14 @@ export default class Main extends Component {
           });
 
 
-
           this.onSubmit = (event) => {
 
-               let a = this.state.valor1;
-               let b = this.state.valor2;
-               let c = this.state.valor3;
-               let d = this.state.valor4;
-               let e = this.state.valor5;
-               let n = Number(a);
-               let m = Number(b);
-               let o = Number(c);
-               let p = Number(d);
-               let q = Number(e);
-
-               alert(n+m+o+p+q);
                event.preventDefault();
 
 
           }
+
+        
 
      };
 
@@ -128,7 +114,7 @@ export default class Main extends Component {
                                         position="absolut"
 
                                         name="valor1"
-                                        type="text"
+                                        type="integer"
                                         value={this.state.valor1}
                                         onChange={this.handleInputChange}
                                    />
@@ -162,7 +148,7 @@ export default class Main extends Component {
                                         position="absolut"
 
                                         name="valor2"
-                                        type="text"
+                                        type="integer"
                                         value={this.state.valor2}
                                         onChange={this.handleInputChange}
                                    />
@@ -180,7 +166,7 @@ export default class Main extends Component {
                                         position="absolut"
 
                                         name="name"
-                                        type="text"
+                                        type="integer"
                                         value={this.state.cnjp}
                                         onChange={this.handleInputChange}
                                    />
@@ -196,7 +182,7 @@ export default class Main extends Component {
                                         position="absolut"
 
                                         name="valor3"
-                                        type="text"
+                                        type="integer"
                                         value={this.state.valor3}
                                         onChange={this.handleInputChange}
                                    />
@@ -230,7 +216,7 @@ export default class Main extends Component {
                                         position="absolut"
 
                                         name="valor4"
-                                        type="text"
+                                        type="integer"
                                         value={this.state.valor4}
                                         onChange={this.handleInputChange}
                                    />
@@ -264,7 +250,7 @@ export default class Main extends Component {
                                         position="absolut"
 
                                         name="valor5"
-                                        type="text"
+                                        type="integer"
                                         value={this.state.valor5}
                                         onChange={this.handleInputChange}
                                    />
@@ -276,6 +262,18 @@ export default class Main extends Component {
                          </form>
                          <br />
 
+                       
+
+                         <h2>{`O total a ser investido é: ${
+                              
+                              parseInt(this.state.valor1) + 
+                              parseInt(this.state.valor2) +
+                              parseInt(this.state.valor3) +
+                              parseInt(this.state.valor4) +
+                              parseInt(this.state.valor5) 
+                                       
+                              }`} </h2>    
+                         
                          <a href="/formulario1">Voltar </a>
                          <br />
                          <a href="/formulario2">Resultado </a>

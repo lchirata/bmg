@@ -114,5 +114,10 @@ export const Formulario = styled.div`
 
     }
 
+    h2 {
+        
+        
+    }
+
 
     `;
