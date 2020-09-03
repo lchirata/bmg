@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 import Header from '../../components/Header/index';
-import { Container, Formulario } from './styles';
-
-import TextField from '@material-ui/core/TextField';
+import { Container, Simulacao } from './styles';
 
 import oneIcon from '../../images/oneIcon.png'
 import twoIcon from '../../images/twoIcon.png'
@@ -13,49 +11,22 @@ import threeIcon from '../../images/threeIcon.png'
 export default class Main extends Component {
 
 
+
      constructor(props) {
-          super(props);
+          super(props)
           this.state = {
-               isGoing: true,
-               numberOfGuests: 2,
-               soma: ''
-
-          };
-
-          this.handleInputChange = this.handleInputChange.bind(this);
+               valores: []
+          }
      }
 
-     handleInputChange(event) {
-          const target = event.target;
-          const value = target.type === 'checkbox' ? target.checked : target.value;
-          const item = target.name;
-          const valor1 = target.name;
-          const valor2 = target.name;
-          const valor3 = target.name;
-          const valor4 = target.name;
-          const valor5 = target.name;
+     getLocalStorage() {
 
-          this.setState({
+          const investimento = (localStorage.getItem("@bmg/total"));
+          const simulacao = parseInt(investimento * 0.10) + parseInt(investimento);
 
-               [item]: value,
-               [valor1]: value,
-               [valor2]: value,
-               [valor3]: value,
-               [valor4]: value,
-               [valor5]: value
-          });
+     }
 
 
-          this.onSubmit = (event) => {
-
-               event.preventDefault();
-
-
-          }
-
-
-
-     };
 
 
 
@@ -64,6 +35,7 @@ export default class Main extends Component {
           return (
                <>
                     <Header />
+
                     <Container>
 
                          <div className="titulo1">
@@ -76,31 +48,47 @@ export default class Main extends Component {
                               <span ><img src={threeIcon} alt="" /> Sua Simulação</span>
                          </div>
                     </Container>
-                    <Formulario>
-                    <div>
-                         <form className="ganhos_e_gastos">
-                              <h3>Estamos quase lá!</h3>
 
-                              <p>02) Quanto em média cada cliente paga cada vez que compra seu produto ou serviço? <br />
-                                   (Ticket médio: Valor médio que cada cliente gasta com seu produto)
-                              </p>
+                    <Simulacao>
 
-                              <p>03) Quantos clientes você consegue atender por dia? </p>
+                         <div>
+                              <header> Sua Simulação</header>
 
-                              <p>04) Quantos dias na semana você pretende trabalhar no projeto?</p>
+                              <p>Que máximo! Acho que posso te ajudar! </p> <br />
+                              <h2>{`Para começar seu projeto AGORA vamos disponibilizar para você R$: ${
+                              parseInt((localStorage.getItem("@bmg/total"))* 0.10) + parseInt((localStorage.getItem("@bmg/total")))
+                              }`} </h2>
+                              <br />
 
-                        </form>
+                              <h2>Com esse dinheiro você poderá comprar todos os itens da sua lista:</h2>
+
+                              <h2>{` ${
+                                   (localStorage.getItem("@bmg/item1")) }`} </h2>
+                               <h2>{` ${
+                                   (localStorage.getItem("@bmg/item2"))  }`} </h2>
+                                <h2>{` ${
+                                   (localStorage.getItem("@bmg/item3"))  }`} </h2>
+                                 <h2>{` ${
+                                   (localStorage.getItem("@bmg/item4"))  }`} </h2>
+                                 <h2>{` ${
+                                   (localStorage.getItem("@bmg/item5"))  }`} </h2>
+
+                              
 
                     </div>
 
 
-                    </Formulario>
 
+
+
+
+
+                    </Simulacao>
+
+                    <button className="confirm" type="submit" onClick={this.getLocalStorage()} value="Confirmar" > Confirmar </button>
 
                </>
 
           )
      }
 }
-
-   

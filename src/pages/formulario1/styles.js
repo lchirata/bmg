@@ -51,7 +51,7 @@ export const Container = styled.div`
         padding-top:15px;
         padding-left:25px;
         font-size:30px;
-        font-weight:60;
+        font-weight:30;
         align-items:center;
         opacity:0.4;
         background:#aaa69d;
@@ -74,12 +74,14 @@ export const Formulario = styled.div`
         font-size:26px;
         padding: 20px 10px;
         text-align:center;
-        font-weight:10;     
+        font-weight:1;   
+        color:#706fd3;  
     }
 
     p {
         margin:50px;
-        font-size:26px;
+        font-size:20px;
+        font-weight:0.2;
 
     }
 

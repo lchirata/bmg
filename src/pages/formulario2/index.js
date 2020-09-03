@@ -49,11 +49,62 @@ export default class Main extends Component {
                [semana]: value
           });
 
+          this.onSubmit = (event)  => {
+               event.preventDefault(); 
+               const valorp = this.state.valor1;
+               const valors = this.state.valor2;
+               const valort = this.state.valor3;
+               const valorq = this.state.valor4;
+               const valorv = this.state.valor5;
 
-          this.onSubmit = (event) => {
-               alert(this.state.semana)
-               event.preventDefault();
-          }
+               const ticket = this.state.ticket;
+               const cliente = this.state.cliente;
+               const semana = this.state.semana;
+               
+               const item1 = this.state.item1;
+               const item2 = this.state.item2;
+               const item3 = this.state.item3;
+               const item4 = this.state.item4;
+               const item5 = this.state.item5;
+               
+               localStorage.setItem('@bmg/item1', item1);
+               localStorage.setItem('@bmg/item2', item2);
+               localStorage.setItem('@bmg/item3', item3);
+               localStorage.setItem('@bmg/item4', item4);
+               localStorage.setItem('@bmg/item5', item5);
+
+               localStorage.setItem('@bmg/valor1', valorp);
+               localStorage.setItem('@bmg/valor2', valors);
+               localStorage.setItem('@bmg/valor3', valort);
+               localStorage.setItem('@bmg/valor4', valorq);
+               localStorage.setItem('@bmg/valor5', valorv);
+
+               localStorage.setItem('@bmg/ticket', ticket);
+               localStorage.setItem('@bmg/cliente', cliente);
+               localStorage.setItem('@bmg/semana', semana);
+
+               const total = 
+               parseInt(this.state.valor1) +
+               parseInt(this.state.valor2) +
+               parseInt(this.state.valor3) +
+               parseInt(this.state.valor4) +
+               parseInt(this.state.valor5);
+
+               const lucro =
+               parseInt(this.state.ticket)*
+               parseInt(this.state.cliente)*
+               parseInt(this.state.semana)
+               ;
+
+
+               localStorage.setItem('@bmg/total', total);
+               localStorage.setItem('@bmg/lucro', lucro)
+
+               alert(item1);
+               window.location.reload();
+             }
+
+
      };
 
      render() {
@@ -121,7 +172,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="name"
+                                        name="item1"
                                         type="text"
                                         value={this.state.item}
                                         onChange={this.handleInputChange}
@@ -155,7 +206,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="name"
+                                        name="item2"
                                         type="text"
                                         value={this.state.item}
                                         onChange={this.handleInputChange}
@@ -189,7 +240,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="name"
+                                        name="item3"
                                         type="integer"
                                         value={this.state.item}
                                         onChange={this.handleInputChange}
@@ -223,7 +274,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="name"
+                                        name="item4"
                                         type="text"
                                         value={this.state.item}
                                         onChange={this.handleInputChange}
@@ -257,7 +308,7 @@ export default class Main extends Component {
                                         margin="10px"
                                         position="absolut"
 
-                                        name="name"
+                                        name="item5"
                                         type="text"
                                         value={this.state.item}
                                         onChange={this.handleInputChange}
@@ -282,6 +333,7 @@ export default class Main extends Component {
 
                               <h2>{`O Total de gastos necessários é: ${
 
+                        
                                    parseInt(this.state.valor1) +
                                    parseInt(this.state.valor2) +
                                    parseInt(this.state.valor3) +
@@ -353,15 +405,17 @@ export default class Main extends Component {
 
                               <h2>{`Seu Lucro no mês é de: ${
 
-                                   parseInt(this.state.ticket)*
-                                   parseInt(this.state.cliente)*
-                                   parseInt(this.state.semana) 
+                                   parseInt(this.state.ticket) *
+                                   parseInt(this.state.cliente) *
+                                   parseInt(this.state.semana)
 
                                    }`} </h2>
 
 
                               <br />
                               <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar" > Confirmar </button>
+
+                              <a href="/formulario3">Ver seu resultado</a>
 
                          </form>
                          <br />
