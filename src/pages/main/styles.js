@@ -17,21 +17,38 @@ export const Container = styled.div`
       height:280px;
       font-size:28px;
       margin-left: 45px;
-      margin-top: 5px;
+      margin-top: 65px;
       padding-top:55px;
 
     }
 
-    p {
+    h1 {
+        margin-top:80px;
+    }
+
+    p  {
+        margin-left:55px;
+        margin-top: 8px;
+        margin-block-end:10px;
+        width:380px;
+        font-size:22px;   
+        color:#50c2b1;
+    }
+
+    h3 {
         margin-left:55px;
         margin-top: 8px;
         width:380px;
-        font-size:20px;   
+        font-size:22px;   
+    }
+
+    Link {
+        margin:10px;
     }
 
     .btn {
         color:#FFF;
-        background-color:#706fd3;
+        background-color:#FC6404;
         border:0px;
         margin:55px;
         padding:10px;
@@ -39,11 +56,19 @@ export const Container = styled.div`
         margin-left:180px;
     }
 
+    .btn2 {
+        
+        margin-left:100px;
+        margin-top:35px;
+
+
+    }
+
     img {
         margin-left:550px;
-        margin-top:-200px;
- 
-        
+        margin-top:-300px;
+        width:600px;
+        height:600px;        
     }
 
      .redes-sociais{

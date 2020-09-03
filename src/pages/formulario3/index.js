@@ -21,8 +21,8 @@ export default class Main extends Component {
 
      getLocalStorage() {
 
-          const investimento = (localStorage.getItem("@bmg/total"));
-          const simulacao = parseInt(investimento * 0.10) + parseInt(investimento);
+         // const investimento = (localStorage.getItem("@bmg/total"));
+          //const simulacao = parseInt(investimento * 0.10) + parseInt(investimento);
 
      }
 
@@ -56,35 +56,41 @@ export default class Main extends Component {
 
                               <p>Que máximo! Acho que posso te ajudar! </p> <br />
                               <h2>{`Para começar seu projeto AGORA vamos disponibilizar para você R$: ${
-                              parseInt((localStorage.getItem("@bmg/total"))* 0.10) + parseInt((localStorage.getItem("@bmg/total")))
-                              }`} </h2>
+                                   parseFloat((localStorage.getItem("@bmg/total")) * 0.10) + parseFloat((localStorage.getItem("@bmg/total")))
+                                   }`} </h2>
                               <br />
 
                               <h2>Com esse dinheiro você poderá comprar todos os itens da sua lista:</h2>
 
                               <h2>{` ${
-                                   (localStorage.getItem("@bmg/item1")) }`} </h2>
-                               <h2>{` ${
-                                   (localStorage.getItem("@bmg/item2"))  }`} </h2>
-                                <h2>{` ${
-                                   (localStorage.getItem("@bmg/item3"))  }`} </h2>
-                                 <h2>{` ${
-                                   (localStorage.getItem("@bmg/item4"))  }`} </h2>
-                                 <h2>{` ${
-                                   (localStorage.getItem("@bmg/item5"))  }`} </h2>
-
-                              
-
-                    </div>
-
-
-
-
-
-
+                                   (localStorage.getItem("@bmg/item1"))}`} </h2>
+                              <h2>{` ${
+                                   (localStorage.getItem("@bmg/item2"))}`} </h2>
+                              <h2>{` ${
+                                   (localStorage.getItem("@bmg/item3"))}`} </h2>
+                              <h2>{` ${
+                                   (localStorage.getItem("@bmg/item4"))}`} </h2>
+                              <h2>{` ${
+                                   (localStorage.getItem("@bmg/item5"))}`} </h2>
+                         </div>
 
                     </Simulacao>
 
+
+                    <Simulacao>
+                         <div>
+                              <header>Não se preocupe! </header>
+                              <h3>
+                                   Aposto que você está se perguntando como vai pagar isso, acertei?
+                              </h3>
+
+                              <p>
+                              Se você atender xxx clientes por dia, em 2 dias você conseguirá pagar o valor da parcela. 
+                              </p>
+                         </div>
+
+
+                    </Simulacao>
                     <button className="confirm" type="submit" onClick={this.getLocalStorage()} value="Confirmar" > Confirmar </button>
 
                </>

@@ -10,6 +10,7 @@ import twoIcon from '../../images/twoIcon.png'
 import threeIcon from '../../images/threeIcon.png'
 
 
+
 export default class Main extends Component {
 
     
