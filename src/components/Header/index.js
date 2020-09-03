@@ -9,11 +9,11 @@ export default function Header() {
         <Contaneir>
             <div>
                 <Link style={{ color: "#FFF",textDecoration: 'none', fontSize: '32px' }} to="/">BMG</Link>
-                <p>para empreendedoras</p>
+                <p>para elas</p>
             </div>
             <div>
-                <a style={{ color: "#FFF", fontSize:"22px",fontWeight:"2px",textDecoration: 'none' }} href="https://www.bancobmg.com.br/internetbank/IBIndex.aspx" >Entrar</a>
-                <a style={{ color: "#FFF", fontSize:"22px",fontWeight:"2px",textDecoration: 'none' }} href="/" >Ajuda</a>
+                <a style={{ color: "#FFF", fontSize:"20px",fontWeight:"2px",textDecoration: 'none' }} href="https://www.bancobmg.com.br/internetbank/IBIndex.aspx" >Entrar</a>
+                <a style={{ color: "#FFF", fontSize:"20px",fontWeight:"2px",textDecoration: 'none' }} href="/" >Ajuda</a>
             </div>
         </Contaneir>
     );

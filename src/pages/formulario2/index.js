@@ -18,7 +18,7 @@ export default class Main extends Component {
           this.state = {
                isGoing: true,
                numberOfGuests: 2,
-               soma:''
+               soma: ''
 
           };
 
@@ -53,7 +53,7 @@ export default class Main extends Component {
 
           }
 
-        
+
 
      };
 
@@ -83,6 +83,34 @@ export default class Main extends Component {
                          <br>
                          </br>
 
+                         <div className="exemplo">
+
+                         <p>Exemplo</p>
+                   
+                              <TextField
+                                   className="name"
+                                   id="standard-size-small"
+                                   label="item"
+                                   defaultValue="Cadeiras de salão"
+                                   variant="filled"
+                                   size="small"
+                                   margin="10px"
+                                   position="absolut"
+                              ></TextField>
+                              <TextField
+                                   className="name"
+                                   id="standard-size-small"
+                                   label="Valor"
+                                   defaultValue="300,00"
+                                   variant="filled"
+                                   size="small"
+                                   margin="10px"
+                                   position="absolut"
+                              ></TextField>
+                         </div>
+                         <br></br>
+
+
 
                          <form>
 
@@ -92,7 +120,7 @@ export default class Main extends Component {
                                         id="standard-size-small"
                                         label="item 1 "
                                         defaultValue=""
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -108,7 +136,7 @@ export default class Main extends Component {
                                         id="1"
                                         label="Valor"
                                         defaultValue="0,00"
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -126,7 +154,7 @@ export default class Main extends Component {
                                         id="standard-size-small"
                                         label="item 2"
                                         defaultValue=""
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -142,7 +170,7 @@ export default class Main extends Component {
                                         id="2"
                                         label="Valor"
                                         defaultValue="0,00"
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -160,7 +188,7 @@ export default class Main extends Component {
                                         id="standard-size-small"
                                         label="item 3"
                                         defaultValue=""
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -176,7 +204,7 @@ export default class Main extends Component {
                                         id="3"
                                         label="Valor"
                                         defaultValue="0,00"
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -194,7 +222,7 @@ export default class Main extends Component {
                                         id="standard-size-small"
                                         label="item 4"
                                         defaultValue=""
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -210,7 +238,7 @@ export default class Main extends Component {
                                         id="4"
                                         label="Valor"
                                         defaultValue="0,00"
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -228,7 +256,7 @@ export default class Main extends Component {
                                         id="standard-size-small"
                                         label="item 5"
                                         defaultValue=""
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -244,7 +272,7 @@ export default class Main extends Component {
                                         id="5"
                                         label="Valor"
                                         defaultValue="0,00"
-                                        variant="filled"
+                                        variant="outlined"
                                         size="small"
                                         margin="10px"
                                         position="absolut"
@@ -262,18 +290,18 @@ export default class Main extends Component {
                          </form>
                          <br />
 
-                       
+
 
                          <h2>{`O total a ser investido é: ${
-                              
-                              parseInt(this.state.valor1) + 
+
+                              parseInt(this.state.valor1) +
                               parseInt(this.state.valor2) +
                               parseInt(this.state.valor3) +
                               parseInt(this.state.valor4) +
-                              parseInt(this.state.valor5) 
-                                       
-                              }`} </h2>    
-                         
+                              parseInt(this.state.valor5)
+
+                              }`} </h2>
+
                          <a href="/formulario1">Voltar </a>
                          <br />
                          <a href="/formulario2">Resultado </a>

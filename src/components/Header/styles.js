@@ -10,6 +10,7 @@ export const Contaneir = styled.div`
     display: flex;
     align-items: center;
     font-size:20px;
+    font-weight:5px;
     display: flex;
     justify-content: space-between;
 

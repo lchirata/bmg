@@ -114,9 +114,10 @@ export const Formulario = styled.div`
 
     }
 
-    h2 {
-        
-        
+    .exemplo p {
+        margin:10px;
+        font-size:24px;
+        font-weight:20;
     }
 
 

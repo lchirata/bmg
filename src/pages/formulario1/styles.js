@@ -26,6 +26,7 @@ export const Container = styled.div`
         text-align:center;
         background: #ffda79;
         box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 1);
+        opacity:0.8;
     }
     .titulo2{
         width:290px;
