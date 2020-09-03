@@ -22,7 +22,7 @@ export const Container = styled.div`
         border-radius:3px;
         border-color:black;  
         font-weight:60;
-        font-size:35px;
+        font-size:30px;
         text-align:center;
 
 
@@ -52,7 +52,7 @@ export const Container = styled.div`
         border-radius:3px;
         padding-top:15px;
         padding-left:25px;
-        font-size:35px;
+        font-size:30px;
         font-weight:60;
         align-items:center;
         opacity:0.4;

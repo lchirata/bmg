@@ -41,6 +41,7 @@ export const Container = styled.div`
         background:#aaa69d;
         box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 1);
     }
+
     .titulo3{
         width:290px;
         margin-top:20px;
@@ -48,7 +49,7 @@ export const Container = styled.div`
         border-radius:3px;
         padding-top:15px;
         padding-left:25px;
-        font-size:35px;
+        font-size:30px;
         font-weight:60;
         align-items:center;
         opacity:0.4;
@@ -113,7 +114,6 @@ export const Formulario = styled.div`
         font-size:12px;
         color: red;
 
-    }
     }
 
 

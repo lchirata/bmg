@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle `
-    @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet');
 
     *{
         margin: 0;
@@ -12,10 +12,11 @@ export default createGlobalStyle `
 
     html, body, #root {
         height: 100%;
+        font-style:'Montserrat';
     }
 
     body {
-        font: 14px, 'Roboto', sans-serif;
+        font-family: 'Montserrat', sans-serif;
         background: #ecf1f8;
         color: #333;
         -webkit-font-somoothing: antialiased !important;
