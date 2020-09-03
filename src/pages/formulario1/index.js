@@ -5,10 +5,9 @@ import { Container, Formulario } from './styles';
 
 import TextField from '@material-ui/core/TextField';
 
-import oneIcon from '../../images/oneIcon.png'
-import twoIcon from '../../images/twoIcon.png'
-import threeIcon from '../../images/threeIcon.png'
-
+import oneIcon from '../../images/oneIcon.png';
+import twoIcon from '../../images/twoIcon.png';
+import threeIcon from '../../images/threeIcon.png';
 
 
 export default class Main extends Component {
@@ -47,7 +46,7 @@ export default class Main extends Component {
 
           this.onSubmit = (event) => {
                event.preventDefault();
-               alert(this.state.cnpj);
+               // alert(this.state.cnpj);
                window.location.href = "/formulario2";
           }
      };
@@ -185,10 +184,9 @@ export default class Main extends Component {
                               Confirmar 
                               </button>
                          </form>
+
+
                          <p></p>
-
-                         <a href="/formulario2">Continuar </a>
-
 
                     </Formulario>
 

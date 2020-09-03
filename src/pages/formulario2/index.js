@@ -4,6 +4,8 @@ import Header from '../../components/Header/index';
 import { Container, Formulario } from './styles';
 
 import TextField from '@material-ui/core/TextField';
+import { FiCheck } from "react-icons/fi";
+
 
 import oneIcon from '../../images/oneIcon.png'
 import twoIcon from '../../images/twoIcon.png'
@@ -101,7 +103,7 @@ export default class Main extends Component {
                localStorage.setItem('@bmg/lucro', lucro)
 
                alert(item1);
-               window.location.reload();
+               window.location.href = "/formulario3";
              }
 
 
@@ -125,8 +127,8 @@ export default class Main extends Component {
                     </Container>
                     <Formulario>
                          <h3>Ultimo passo para simular o seu crédito!</h3>
-                         <h4>01) O que você precisa para começar seu projeto?</h4>
-                         <h4>Para uma melhor simulação pesquise os valores de cada item na internet!</h4>
+                         <h4 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> O que você precisa para começar seu projeto?</h4>
+                         <h5>Para uma melhor simulação pesquise os valores de cada item na internet!</h5>
                          <br>
                          </br>
 
@@ -330,7 +332,7 @@ export default class Main extends Component {
                                         onChange={this.handleInputChange}
                                    />
                               </div>
-
+{/* 
                               <h2>{`O Total de gastos necessários é: ${
 
                         
@@ -340,15 +342,14 @@ export default class Main extends Component {
                                    parseFloat(this.state.valor4) +
                                    parseFloat(this.state.valor5)
 
-                                   }`} </h2>
+                                   }`} </h2> */}
 
+                              <br />
                               <h3>Estamos quase lá! </h3>
 
-
-
-                              <p>02) Quanto em média cada cliente paga cada vez que compra seu produto ou serviço? <br />
-                                   (Ticket médio: Valor médio que cada cliente gasta com seu produto)
-                              </p>
+                              <h4 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck />Quanto em média cada cliente paga <br />cada vez que compra seu produto ou serviço?</h4>
+                              <h5>(Ticket médio: Valor médio que cada cliente gasta com seu produto)</h5>
+                              <br />
 
                               <TextField
                                    className="name"
@@ -366,7 +367,7 @@ export default class Main extends Component {
                                    onChange={this.handleInputChange}
                               />
 
-                              <p>03) Quantos clientes você consegue atender por dia? </p>
+                              <h4 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck />Quantos clientes você consegue atender por dia?</h4>
 
                               <TextField
                                    className="name"
@@ -384,8 +385,8 @@ export default class Main extends Component {
                                    onChange={this.handleInputChange}
                               />
 
+                              <h4 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck />Quantos dias na semana você pretende trabalhar no projeto?</h4>
 
-                              <p>04) Quantos dias na semana você pretende trabalhar no projeto?</p>
 
                               <TextField
                                    className="name"
@@ -413,9 +414,11 @@ export default class Main extends Component {
 
 
                               <br />
-                              <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar" > Confirmar </button>
+                              {/* <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar" > Confirmar </button> */}
 
-                              <a href="/formulario3">Ver seu resultado</a>
+                              <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar"  > 
+                              Confirmar 
+                              </button>
 
                          </form>
                          <br />

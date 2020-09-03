@@ -66,7 +66,6 @@ export default class Main extends Component {
                         style={{ textDecoration: 'none'  }}
                         to="/formulario1"
                         className="btn">Abrir Conta
-                        
                     </Link>
                     </div>
 
@@ -93,13 +92,6 @@ export default class Main extends Component {
 
 
                 </Container>
-
-
-
-
-
-
-
             </>
 
         )
