@@ -21,7 +21,7 @@ export const Container = styled.div`
         padding-top:15px;
         border-radius:3px;
         border-color:black;  
-        font-weight:60;
+        font-weight:40;
         font-size:30px;
         text-align:center;
 
@@ -39,7 +39,7 @@ export const Container = styled.div`
         padding-left:35px;
         border-radius:3px;
         font-size:35px;
-        font-weight:60;
+        font-weight:40;
         align-items:center;
 
         background: #ffda79;
@@ -53,7 +53,7 @@ export const Container = styled.div`
         padding-top:15px;
         padding-left:25px;
         font-size:30px;
-        font-weight:60;
+        font-weight:40;
         align-items:center;
         opacity:0.4;
         background:#aaa69d;
@@ -73,25 +73,25 @@ export const Container = styled.div`
 export const Formulario = styled.div`
         text-align:center;
         margin:20px;
-
-    h3 {
         
 
+    h3 {
         font-size:26px;
         padding: 20px 10px;
         text-align:center;
-
-
-        
+        font-weight:10;  
     }
 
-    p {
-        margin-top:0px;
-        margin-left:320px;
-        font-size:12px;
-        color: red;
-
+    h4 {
+        font-weight:10;  
     }
+
+    h2 {
+        margin:30px;
+        font-weight:10;  
+    }
+
+
 
     .formulario {
         justify-content:row;

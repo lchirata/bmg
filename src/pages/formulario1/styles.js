@@ -70,14 +70,10 @@ export const Formulario = styled.div`
         margin:20px;
 
     h3 {
-        
-
         font-size:26px;
         padding: 20px 10px;
         text-align:center;
-
-
-        
+        font-weight:10;     
     }
 
     p {
