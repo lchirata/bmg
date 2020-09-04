@@ -122,7 +122,7 @@ export default class Main extends Component {
                                    }`} reais por dia trabalhado </h2>
                               <h2 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> Sendo assim, é possivel quita a parcela com mais ou menos {` ${
                                    ((parseInt(((localStorage.getItem("@bmg/total") * (1 + 0.5) ^ 12) / 12).toFixed(1) / (((localStorage.getItem("@bmg/ticket") * ((localStorage.getItem("@bmg/cliente")))))))) + 1)
-                                   }`} dias de trabalho</h2>
+                                   }`} dias de trabalho!</h2>
                          </div>
 
                     </Simulacao>
