@@ -51,8 +51,8 @@ export default class Main extends Component {
                [semana]: value
           });
 
-          this.onSubmit = (event)  => {
-               event.preventDefault(); 
+          this.onSubmit = (event) => {
+               event.preventDefault();
                const valorp = this.state.valor1;
                const valors = this.state.valor2;
                const valort = this.state.valor3;
@@ -62,13 +62,13 @@ export default class Main extends Component {
                const ticket = this.state.ticket;
                const cliente = this.state.cliente;
                const semana = this.state.semana;
-               
+
                const item1 = this.state.item1;
                const item2 = this.state.item2;
                const item3 = this.state.item3;
                const item4 = this.state.item4;
                const item5 = this.state.item5;
-               
+
                localStorage.setItem('@bmg/item1', item1);
                localStorage.setItem('@bmg/item2', item2);
                localStorage.setItem('@bmg/item3', item3);
@@ -85,26 +85,34 @@ export default class Main extends Component {
                localStorage.setItem('@bmg/cliente', cliente);
                localStorage.setItem('@bmg/semana', semana);
 
-               const total = 
-               parseFloat(this.state.valor1) +
-               parseFloat(this.state.valor2) +
-               parseFloat(this.state.valor3) +
-               parseFloat(this.state.valor4) +
-               parseFloat(this.state.valor5);
+               const total =
+                    (parseFloat(this.state.valor1)) +
+                    (parseFloat(this.state.valor2)) +
+                    (parseFloat(this.state.valor3)) +
+                    (parseFloat(this.state.valor4)) +
+                    (parseFloat(this.state.valor5));
 
                const lucro =
-               parseFloat(this.state.ticket)*
-               parseFloat(this.state.cliente)*
-               parseFloat(this.state.semana)
-               ;
+                    parseFloat(this.state.ticket) *
+                    parseFloat(this.state.cliente) *
+                    parseFloat(this.state.semana)
+                    ;
+
+               if (isNaN(total)) {
+                    alert("Preenche pelo menos 5 items")
+                    window.location.href = "/formulario2";
+               }
+
+               else{
+                    localStorage.setItem('@bmg/total', total);
+                    localStorage.setItem('@bmg/lucro', lucro)
 
 
-               localStorage.setItem('@bmg/total', total);
-               localStorage.setItem('@bmg/lucro', lucro)
+                    window.location.href = "/formulario3";
+               }
 
-               // alert(item1);
-               window.location.href = "/formulario3";
-             }
+
+          }
 
 
      };
@@ -396,9 +404,9 @@ export default class Main extends Component {
 
 
                               <br />
-                         
-                              <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar"  > 
-                              Confirmar 
+
+                              <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar"  >
+                                   Confirmar
                               </button>
 
                          </form>
