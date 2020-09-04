@@ -102,7 +102,7 @@ export default class Main extends Component {
                localStorage.setItem('@bmg/total', total);
                localStorage.setItem('@bmg/lucro', lucro)
 
-               alert(item1);
+               // alert(item1);
                window.location.href = "/formulario3";
              }
 
@@ -393,14 +393,14 @@ export default class Main extends Component {
                                    value={this.state.semana}
                                    onChange={this.handleInputChange}
                               />
-
+{/* 
                               <h2>{`Seu Lucro no mês é de: ${
 
                                    parseInt(this.state.ticket) *
                                    parseInt(this.state.cliente) *
                                    parseInt(this.state.semana)
 
-                                   }`} </h2>
+                                   }`} </h2> */}
 
 
                               <br />
