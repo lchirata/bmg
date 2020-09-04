@@ -127,7 +127,8 @@ export default class Main extends Component {
                     </Container>
                     <Formulario>
                          <h3>Ultimo passo para simular o seu crédito!</h3>
-                         <h4 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> O que você precisa para começar seu projeto?<br/> Liste pelo menos 5 Items</h4>
+                         <h4 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> O que você precisa para começar seu projeto?</h4>
+                         <p style={{ color: 'red', margin: '15px' }} > Liste pelo menos 5 Items</p>
                          <h5>Para uma melhor simulação pesquise os valores de cada item na internet!</h5>
                          <br>
                          </br>
@@ -332,17 +333,6 @@ export default class Main extends Component {
                                         onChange={this.handleInputChange}
                                    />
                               </div>
-{/* 
-                              <h2>{`O Total de gastos necessários é: ${
-
-                        
-                                   parseFloat(this.state.valor1) +
-                                   parseFloat(this.state.valor2) +
-                                   parseFloat(this.state.valor3) +
-                                   parseFloat(this.state.valor4) +
-                                   parseFloat(this.state.valor5)
-
-                                   }`} </h2> */}
 
                               <br />
                               <h3>Estamos quase lá! </h3>
@@ -414,8 +404,7 @@ export default class Main extends Component {
 
 
                               <br />
-                              {/* <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar" > Confirmar </button> */}
-
+                         
                               <button className="confirm" type="submit" onClick={this.onSubmit} value="Confirmar"  > 
                               Confirmar 
                               </button>
