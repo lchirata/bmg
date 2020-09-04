@@ -110,22 +110,32 @@ export default class Main extends Component {
                                    <h1> Como pagar? </h1>
                               </header>
 
-                              <h3>Se por exemplo escolher a opção de parcela de 1 ano, 
+                              <h3>Se por exemplo escolher a opção de parcela de 1 ano,
                                <br />
                                  e terá mais uma margem para emergências.
                                </h3>
 
 
                               <h2 style={{ color: '#50c2b1', margin: '1px' }} ><FiCheck /> Você ganha mais ou menos  {` ${
-                                   ((parseFloat((localStorage.getItem("@bmg/ticket")) * (parseFloat((localStorage.getItem("@bmg/cliente")))) )))
-                                   
+                                   ((parseFloat((localStorage.getItem("@bmg/ticket")) * (parseFloat((localStorage.getItem("@bmg/cliente")))))))
+
                                    }`} reais por dia trabalhado </h2>
                               <h2 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> Sendo assim, é possivel quita a parcela com apenas {` ${
-                                    ((parseInt((localStorage.getItem("@bmg/total")) * (1 + 0.5) ^ 12) / 12).toFixed(0)/((parseInt((localStorage.getItem("@bmg/ticket")) * (parseInt((localStorage.getItem("@bmg/cliente")))).toFixed(1) ))))
+                                   ((parseInt((localStorage.getItem("@bmg/total")) * (1 + 0.5) ^ 12) / 12).toFixed(0) / ((parseInt((localStorage.getItem("@bmg/ticket")) * (parseInt((localStorage.getItem("@bmg/cliente")))).toFixed(1)))))
                                    }`} dias de trabalho</h2>
                          </div>
 
                     </Simulacao>
+                    <Simulacao>
+                         <div>
+                              <h2 style={{ color: '#442C74', margin: '1px' }} >Ele foi feito para você!</h2>
+                              <br />
+                              <button className="confirm" type="submit"   >
+                                   Entre em contato dos nossos gerentes!
+                         </button>
+                         </div>
+                    </Simulacao>
+
 
                </>
 

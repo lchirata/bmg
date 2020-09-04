@@ -106,4 +106,22 @@ export const Simulacao = styled.div`
            font-weight:12;
 
        }
+
+       .confirm {
+
+
+        size:10px;
+        padding:15px;
+        color:#FFF;
+        background:#FC6404;
+        opacity:0.8;
+        border-width:1.5px;
+        border-style:none;
+        border-radius:3px;
+        text-decoration:none;
+
+
+    }
+
+
     `;
