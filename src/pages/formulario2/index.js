@@ -99,7 +99,7 @@ export default class Main extends Component {
                     ;
 
                if (isNaN(total)) {
-                    alert("Preenche pelo menos 5 items")
+                    alert("Preencha pelo menos 5 items")
                     window.location.href = "/formulario2";
                }
 
