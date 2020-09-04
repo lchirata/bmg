@@ -86,16 +86,16 @@ export default class Main extends Component {
                localStorage.setItem('@bmg/semana', semana);
 
                const total = 
-               parseInt(this.state.valor1) +
-               parseInt(this.state.valor2) +
-               parseInt(this.state.valor3) +
-               parseInt(this.state.valor4) +
-               parseInt(this.state.valor5);
+               parseFloat(this.state.valor1) +
+               parseFloat(this.state.valor2) +
+               parseFloat(this.state.valor3) +
+               parseFloat(this.state.valor4) +
+               parseFloat(this.state.valor5);
 
                const lucro =
-               parseInt(this.state.ticket)*
-               parseInt(this.state.cliente)*
-               parseInt(this.state.semana)
+               parseFloat(this.state.ticket)*
+               parseFloat(this.state.cliente)*
+               parseFloat(this.state.semana)
                ;
 
 

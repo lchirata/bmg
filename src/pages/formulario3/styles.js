@@ -55,8 +55,10 @@ export const Container = styled.div`
         font-size:30px;
         font-weight:40;
         align-items:center;
-        background: #ffda79;
+        background: #50C2B1;
         box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 1);
+        opacity:0.8;
+
     }
 
     img {
@@ -80,13 +82,28 @@ export const Simulacao = styled.div`
         div {
             border-color:gray;
             border-width:0.2px;
-            box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 1);
+            box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 2.5);
+            border-radius:3px;
+            background:#f7f1e3
         }
        
        header {
-           background:#ffda79;
+           background:#f7f1e3;
            font-size:35px;
-           box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 1);
+           box-shadow: 0 1px 4px 0 rgba(192, 208, 230, 2.5);
            border-radius:3px;
+           font-weight:12;
+       }
+
+       h1 {
+            margin:15px;
+           font-size:26px;
+           font-weight:12;
+       }
+
+       h3 {
+           margin:5px;
+           font-weight:12;
+
        }
     `;

@@ -3,9 +3,6 @@ import { Link } from "react-router-dom";
 
 import { Contaneir } from './styles';
 
-import { logo } from '../../images/logo3.png'
-
-
 export default function Header() {
     return (
         <Contaneir>
