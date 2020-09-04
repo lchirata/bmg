@@ -393,14 +393,6 @@ export default class Main extends Component {
                                    value={this.state.semana}
                                    onChange={this.handleInputChange}
                               />
-{/* 
-                              <h2>{`Seu Lucro no mês é de: ${
-
-                                   parseInt(this.state.ticket) *
-                                   parseInt(this.state.cliente) *
-                                   parseInt(this.state.semana)
-
-                                   }`} </h2> */}
 
 
                               <br />

@@ -110,9 +110,9 @@ export default class Main extends Component {
                                    <h1> Como pagar? </h1>
                               </header>
 
-                              <h3>Se por exemplo escolher a opção de parcela de 1 ano,
+                              <h3>Se optar pela parcela de 1 ano, e considerando que :
                                <br />
-                                 e terá mais uma margem para emergências.
+                                 
                                </h3>
 
 
@@ -120,7 +120,7 @@ export default class Main extends Component {
                                    ((parseFloat((localStorage.getItem("@bmg/ticket")) * (parseFloat((localStorage.getItem("@bmg/cliente")))))))
 
                                    }`} reais por dia trabalhado </h2>
-                              <h2 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> Sendo assim, é possivel quita a parcela com mais ou menos {` ${
+                              <h2 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck />É possivel quitar a parcela com mais ou menos {` ${
                                    ((parseInt(((localStorage.getItem("@bmg/total") * (1 + 0.5) ^ 12) / 12).toFixed(1) / (((localStorage.getItem("@bmg/ticket") * ((localStorage.getItem("@bmg/cliente")))))))) + 1)
                                    }`} dias de trabalho!</h2>
                          </div>
