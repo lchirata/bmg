@@ -86,18 +86,9 @@ export default class Main extends Component {
                                    <h1> Parcelas </h1>
                               </header>
 
-                              <h1>{` R$: ${
-                                   parseFloat((localStorage.getItem("@bmg/total")) * 0.10) +
-                                   parseFloat((localStorage.getItem("@bmg/total")))
-                                   }`} </h1>
+                              <h1> Você pode escolher essas opções </h1>
 
                               <br />
-
-                              <h3>Com esse dinheiro você poderá comprar todos os itens da sua lista
-                               <br />
-                                    e terá mais uma margem para emergências.
-                              </h3>
-
 
                               <h2 style={{ color: '#50c2b1', margin: '1px' }} ><FiCheck /> 12X{` ${
                                    ((parseFloat((localStorage.getItem("@bmg/total")) * (1 + 0.5) ^ 12) / 12).toFixed(2))
@@ -116,31 +107,22 @@ export default class Main extends Component {
 
                          <div>
                               <header>
-                                   <h1> Parcelas </h1>
+                                   <h1> Como pagar? </h1>
                               </header>
 
-                              <h1>{` R$: ${
-                                   parseFloat((localStorage.getItem("@bmg/total")) * 0.10) +
-                                   parseFloat((localStorage.getItem("@bmg/total")))
-                                   }`} </h1>
-
-                              <br />
-
-                              <h3>Com esse dinheiro você poderá comprar todos os itens da sua lista
+                              <h3>Se por exemplo escolher a opção de parcela de 1 ano, 
                                <br />
                                  e terá mais uma margem para emergências.
                                </h3>
 
 
-                              <h2 style={{ color: '#50c2b1', margin: '1px' }} ><FiCheck /> 12X{` ${
-                                   ((parseFloat((localStorage.getItem("@bmg/total")) * (1 + 0.5) ^ 12) / 12).toFixed(2))
-                                   }`} </h2>
-                              <h2 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> 24X{` ${
-                                   ((parseFloat((localStorage.getItem("@bmg/total")) * (1 + 0.5) ^ 24) / 24).toFixed(2))
-                                   }`} </h2>
-                              <h2 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> 36X{` ${
-                                   ((parseFloat((localStorage.getItem("@bmg/total")) * (1 + 0.5) ^ 36) / 36).toFixed(2))
-                                   }`} </h2>
+                              <h2 style={{ color: '#50c2b1', margin: '1px' }} ><FiCheck /> Você ganha mais ou menos  {` ${
+                                   ((parseFloat((localStorage.getItem("@bmg/ticket")) * (parseFloat((localStorage.getItem("@bmg/cliente")))) )))
+                                   
+                                   }`} reais por dia trabalhado </h2>
+                              <h2 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> Sendo assim, é possivel quita a parcela com apenas {` ${
+                                    ((parseInt((localStorage.getItem("@bmg/total")) * (1 + 0.5) ^ 12) / 12).toFixed(0)/((parseInt((localStorage.getItem("@bmg/ticket")) * (parseInt((localStorage.getItem("@bmg/cliente")))).toFixed(1) ))))
+                                   }`} dias de trabalho</h2>
                          </div>
 
                     </Simulacao>

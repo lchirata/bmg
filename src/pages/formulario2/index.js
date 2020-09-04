@@ -127,7 +127,7 @@ export default class Main extends Component {
                     </Container>
                     <Formulario>
                          <h3>Ultimo passo para simular o seu crédito!</h3>
-                         <h4 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> O que você precisa para começar seu projeto?</h4>
+                         <h4 style={{ color: '#50c2b1', margin: '15px' }} ><FiCheck /> O que você precisa para começar seu projeto?<br/> Liste pelo menos 5 Items</h4>
                          <h5>Para uma melhor simulação pesquise os valores de cada item na internet!</h5>
                          <br>
                          </br>
