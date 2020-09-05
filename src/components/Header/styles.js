@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Contaneir = styled.div`
-    height: 70px;
+    height: 90px;
     padding: 0 30px;
     background: #442C74;
     opacity:0.8;
@@ -16,15 +16,16 @@ export const Contaneir = styled.div`
     justify-content: space-between;
 
     a {
-        margin:5px;
-        font-size:35px;
+
+        /* font-size:35px; */
 
     }
 
     img {
-
-        width:100px;
-        height:80px;
+        margin-top:-2px;
+        margin-left:-90px;
+        width:180px;
+        height:100px;
 
     }
 
