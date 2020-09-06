@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import { Container, Container2, Container3 } from './styles';
 import Header from '../../components/Header/index';
 
-import { FiCheck } from "react-icons/fi";
-//FiInstagram, FiFacebook, FiTwitter,
+import { FiCheck, FiInstagram, FiFacebook, FiTwitter,} from "react-icons/fi";
+
 
 import fotoGastro from '../../images/fotoGastronomia.jpg';
 import fotoNegocios from '../../images/fotoNegocios.jpg';
@@ -96,36 +96,10 @@ export default class Main extends Component {
 
                     </Container2>
 
+                    < hr />
+                    <Container>
 
-                    {/* <br />
-                    <br />
-                    <br />
 
-                    <div className="abrir-conta">
-                        <h3>Ainda nao tem conta?</h3>
-                    </div>
-                    
-                    <p>É fácil e rápido!</p>
-                        <div>
-                         <p>Faça tudo Online!</p>
-                        </div>
-                        <br />
-                    <div className="btn2">
-                        <Link
-                        style={{ textDecoration: 'none'  }}
-                        to="/formulario1"
-                        className="btn">Abrir Conta
-                    </Link>
-                    </div>
-
-                    <br />
-                    <br />
-
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <br></br> */}
-                    {/* < hr />
 
                     <footer >
                         <p className="siga-nos">Siga-nos nas redes sociais!</p>
@@ -137,10 +111,10 @@ export default class Main extends Component {
                             <p className="informcoes">Termos e Condições</p>
                             <p className="informcoes">Política de Privacidade</p>
                         </div>
-                    </footer> */}
+                    </footer>
 
 
-               
+                    </Container>
             </>
 
         )
