@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import { Container, Container2, Container3 } from './styles';
 import Header from '../../components/Header/index';
 
-import { FiInstagram, FiFacebook, FiTwitter, FiCheck } from "react-icons/fi";
+import { FiCheck } from "react-icons/fi";
+//FiInstagram, FiFacebook, FiTwitter,
 
 import fotoGastro from '../../images/fotoGastronomia.jpg';
 import fotoNegocios from '../../images/fotoNegocios.jpg';
