@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from '../../components/Header/index';
 import { Container, Formulario } from './styles';
 
+import api from '../../services/api';
 import TextField from '@material-ui/core/TextField';
 
 import oneIcon from '../../images/oneIcon.png';
@@ -17,8 +18,7 @@ export default class Main extends Component {
      constructor(props) {
           super(props);
           this.state = {
-               isGoing: true,
-               numberOfGuests: 2
+               clientList:[],
           };
 
           this.handleInputChange = this.handleInputChange.bind(this);
@@ -27,15 +27,17 @@ export default class Main extends Component {
      handleInputChange(event) {
           const target = event.target;
           const value = target.type === 'checkbox' ? target.checked : target.value;
-          const name = target.name;
+          const nome = target.name;
           const cpf = target.name;
           const email = target.name;
           const telefone = target.name;
           const negocio = target.name;
           const cnpj = target.name;
 
+
+
           this.setState({
-               [name]: value,
+               [nome]: value,
                [cpf]: value,
                [email]: value,
                [telefone]: value,
@@ -43,10 +45,28 @@ export default class Main extends Component {
                [cnpj]: value,
           });
 
+         
+
+
+
+
 
           this.onSubmit = (event) => {
+
+               const response = api.post('/clientes', 
+               {
+                    nome: this.state.nome, 
+                    cpf: this.state.cpf, 
+                    email: this.state.email,
+                    telefone: this.state.telefone,
+                    empresa: this.state.negocio,
+                    cnpj: this.state.cnpj
+               });
+     
+               this.setState({clientList: response.data})
+
                event.preventDefault();
-               // alert(this.state.cnpj);
+               // alert(this.state.nome);
                window.location.href = "/formulario2";
           }
      };
@@ -89,7 +109,7 @@ export default class Main extends Component {
                                    margin="10px"
                                    position="absolut"
 
-                                   name="name"
+                                   name="nome"
                                    type="text"
                                    value={this.state.nome}
                                    onChange={this.handleInputChange}
