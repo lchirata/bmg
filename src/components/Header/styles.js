@@ -32,4 +32,11 @@ export const Contaneir = styled.div`
     .link {
         width:300px;
     }
+
+    .adm {
+        color:#FFF;
+        font-size:14px;
+
+    }
+
 `;

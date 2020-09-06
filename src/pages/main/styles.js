@@ -12,6 +12,7 @@ export const Container = styled.div`
       align-items: center;
       flex-flow:column wrap;
 
+
    .titulo {
       width:500px;
       height:600px;

@@ -18,7 +18,12 @@ export default class Main extends Component {
         return (
             <>
                 <Header />
+
+
+                            
                 <Container>
+
+
 
                     <div className="titulo">
                         <h1>Sua oportunidade de dar o primeiro passo para o seu sonho.</h1><br/>

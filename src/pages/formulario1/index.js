@@ -45,11 +45,6 @@ export default class Main extends Component {
                [cnpj]: value,
           });
 
-         
-
-
-
-
 
           this.onSubmit = (event) => {
 

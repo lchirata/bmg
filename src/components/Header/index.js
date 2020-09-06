@@ -8,14 +8,29 @@ export default function Header() {
     return (
         <Contaneir>
             <div>
-                <Link style={{ color: "#FFF",textDecoration: 'none', fontSize: '32px' }} to="/"> <img src={logo} alt=""/></Link>
-                
+                <Link style={{ color: "#FFF", textDecoration: 'none', fontSize: '32px' }} to="/"> <img src={logo} alt="" /></Link>
+
 
             </div>
+
+
+
             <div>
-<a style={{ color: "#FFF", fontSize:"14px",fontWeight:"0.1",textDecoration: 'none' }} href="https://www.bancobmg.com.br/internetbank/IBIndex.aspx" >Entrar</a>
+                <a style={{ color: "#FFF", fontSize: "14px", fontWeight: "0.1", textDecoration: 'none' }} href="https://www.bancobmg.com.br/internetbank/IBIndex.aspx" >Entrar</a>
+                <br />
+                <br />
+                <Link
+                style={{ textDecoration: 'none' }}
+                to="/listarclientes"
+                className="adm">Admin
+                </Link>
+
+
+
 
             </div>
         </Contaneir>
+
+
     );
 }
