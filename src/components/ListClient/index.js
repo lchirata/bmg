@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import api from '../../services/api';
 
+import { Container } from './styles';
+
 
 
 class ListClient extends Component {
@@ -17,20 +19,6 @@ class ListClient extends Component {
 
         this.setState({ clientList: response.data });
 
-        // this.setState({
-        //     clientList: response.data.map(cliente => ({
-        //         id:cliente.id,
-        //         name:cliente.nome,
-        //         cpf:cliente.cpf,
-        //         email:cliente.email,
-        //         telefone:cliente.telefone,
-        //         empresa:cliente.empresa,
-        //         cnpj:cliente.cnpj
-        //     }))
-        // })
-
-
-
 
     }
 
@@ -38,42 +26,42 @@ class ListClient extends Component {
     render() {
 
         const { clientList } = this.state;
-        
-    //     const clientLists = ({cliente}) => (
-    //         <h1>
-    //             {cliente.map(clientList =>(
-    //                 <li key={clientList.id}>
-    //                     <p>{clientList.name}</p>
-
-    //                 </li>
-    //             ))}
-    //         </h1>
-    //     )
-
-
-       
 
         return (
 
-            <div className="App">
-                <div>
-                    <h1>teste</h1>
+            <Container>
 
-                {console.log(clientList)}
-                {clientList.map(cliente => (
-                    <li key={cliente.id}>
-                        <h2>
-                            <strong>
-                                Nome
-                            </strong>
-                            {cliente.nome}
-                        </h2>
-                    </li>
-                ))}
+                <div className="App">
+                    <div>
+                        <h1>Clientes que entraram em contato </h1>
+
+                        <table>
+                            <th>Nome</th>
+                            <th>CPF</th>
+                            <th>empresa</th>
+                            <th>Telefone</th>
+                        </table>
+
+                        {console.log(clientList)}
+                        {clientList.map(cliente => (
+                            <p key={cliente.id}>
+
+                                <td>{cliente.nome}</td>
+                                <td>{cliente.cpf}</td>
+                                <td> {cliente.empresa}</td>
+                                <td>{cliente.telefone}</td>
 
 
+                            </p>
+
+
+                        ))}
+
+
+                    </div>
                 </div>
-            </div>
+
+            </Container>
         );
     }
 }
